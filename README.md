@@ -1,4 +1,4 @@
-# Gerenciador de Lista de Tarefas
+# Gerenciador de Lista de Tarefas PYgenda
 
 ## Descrição
 Este projeto é um **gerenciador de lista de tarefas** simples, desenvolvido em **Python** com a biblioteca **Tkinter** para criar a interface gráfica. Ele permite que o usuário adicione, edite, exclua e marque tarefas como concluídas, oferecendo uma maneira prática de organizar suas atividades diárias.
