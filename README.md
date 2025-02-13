@@ -23,6 +23,10 @@ O projeto depende do **Python** e da biblioteca **Tkinter**. O Tkinter geralment
 ```bash
 pip install tk
 ```
+ou
+```bash
+sudo apt install python3-tk
+```
 ## Funcionalidades
 - **Adicionar Tarefas**: Permite ao usuário adicionar tarefas à lista.
 - **Editar Tarefas**: O usuário pode editar o nome de uma tarefa já existente.
