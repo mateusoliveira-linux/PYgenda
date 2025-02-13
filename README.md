@@ -14,13 +14,15 @@ Este projeto é um **gerenciador de lista de tarefas** simples, desenvolvido em 
 4. Execute o seguinte comando para rodar o projeto:
    ```bash
    python main.py
+   ```
+
 
 ## Dependências
 O projeto depende do **Python** e da biblioteca **Tkinter**. O Tkinter geralmente já vem instalado com o Python, mas caso você precise instalar manualmente, use o seguinte comando:
 
 ```bash
 pip install tk
-
+```
 ## Funcionalidades
 - **Adicionar Tarefas**: Permite ao usuário adicionar tarefas à lista.
 - **Editar Tarefas**: O usuário pode editar o nome de uma tarefa já existente.
