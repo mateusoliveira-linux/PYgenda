@@ -30,16 +30,9 @@ def read_event(screen="home"):
         read()
 
     #destroi a tela de onde foi chameda
-    if screen=="home":
+    if screen=="add":
         #destroi o frame home
-        home.destroy()
-    elif screen=="add":
-        #destroi add
         add.destroy()
-    else:
-        #se não for nenhuma destroi a janela
-        window.destroy()
-        return
 
     global read_list
     read_list=Frame(window)
@@ -49,7 +42,7 @@ def read_event(screen="home"):
     #criando e posicionando label
     label_read=Label(
         read_list,
-        text="LISTA DE EVENTOS",
+        text="EVENTOS",
         font=("",25,"bold"),
         background="#0c1821",
         foreground="#f1f1f1"
@@ -147,11 +140,7 @@ def add_event(screen="home"):
             )
 
     #destroi a tela de onde foi chamando
-    if screen == "home":
-        #destruir home
-        home.destroy()
-    else:
-        #destroi read list
+    if screen == "read":
         read_list.destroy()
 
 
@@ -249,71 +238,14 @@ def add_event(screen="home"):
     add_button.grid(row=4, columnspan=2, pady=25)
     cancel_button.grid(row=5, columnspan=2, pady=25)
 
-#tela home
-def Home(first=True):
-    #testa se a tela foi chamada do main ou de outra tela
-    if first == False:
-        #destroi a tela add
-        add.destroy()
-        #criando e frame home
-        global home
-        home=Frame(window)
-
-    #configurando e posicionando o frame home
-    home.config(bg = "#0c1821")
-    home.pack()
-
-    #criando e posicionando label home
-    label_home=Label(home, text="PYgenda")
-    label_home.config(
-        background="#0c1821",
-        fg = "#f1f1f1",
-        height = 1,
-        width = 10,
-        font=("",34,"bold")
-    )
-    label_home.pack()
-
-    #criando e posicionando os botoes iniciais
-    button_add = Button(
-        home,
-        text="Adicionar",
-        height = 1,
-        width=20,
-        bg="#011e30",
-        fg="#ffffff",
-        bd=0,
-        activebackground = "#011e30",
-        activeforeground = "#d2d5dd",
-        command=add_event
-    )
-
-    button_read = Button(
-        home,
-        text="Ver Lista",
-        height = 1,
-        width=20,
-        bg="#011e30",
-        foreground="#f1f1f1",
-        activebackground = "#011e30",
-        activeforeground = "#d2d5dd",
-        command=read_event
-    )
-
-    button_add.pack(pady=(150,200))
-    button_read.pack()
-
-#---------------------main------------------------
-#criando nova janela (instancia de Tk)
 window = Tk()
 
 #declarando frames
-home=Frame(window)
 add=Frame(window)
 read_list=Frame(window)
 
 #chamando a tela home (freme home e seus widgets)
-Home()
+read_event()
 
 #configura o titolo a cor o icone e o tamanho da janela
 window.iconphoto(False, PhotoImage(file="_icon/icon.png"))
